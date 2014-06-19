@@ -36,6 +36,8 @@
 					echo "
 							</span>
 							<br>
+							<span class='post_hr'></span>
+							<br>
 							<span class='post_body'>
 					";
 					echo $row['body'];

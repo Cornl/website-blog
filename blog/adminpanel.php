@@ -32,7 +32,7 @@
 			<input name="title" type="text" id="title">
 			<br>
 			<b>body</b>
-			<input name="body" type="textarea" id="body">
+			<textarea name="body"></textarea>
 			<br>
 			<input name="submit" type="submit" value="Submit">
 		</form>
