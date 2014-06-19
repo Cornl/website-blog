@@ -30,7 +30,7 @@
 				else
 				{
 					header("Location: ".$_SESSION['destination']);
-				}	
+				}
 			}
 			else
 			{

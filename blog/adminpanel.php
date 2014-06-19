@@ -10,10 +10,9 @@
 		<?php
 			require("config.php");
 			require("functions.php");
-			
-			checklogin();
-			checkadmin();
-			$_SESSION['destination']="adminpanel.php";
+
+			checklogin("login.php?destination=adminpanel.php&error=You must log in to an admin account to access this page!");
+			checkadmin("login.php?destination=adminpanel.php&error=You must be an admin to access this page!");
 		?>
 
 		<nav id="nav">

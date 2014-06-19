@@ -9,19 +9,21 @@
 		}
 	}
 
-	function checklogin()
+	function checklogin($destination)
 	{
 		if( $_SESSION['logged']==0)
 		{
-			header("Location: login.php");
+			header("Location: $destination");
+			exit();
 		}
 	}
 
-	function checkadmin()
+	function checkadmin($destination)
 	{
 		if( $_SESSION['admin']==0)
 		{
-			header("Location: login.php");
+			header("Location: $destination");
+			exit();
 		}
 	}
 ?>

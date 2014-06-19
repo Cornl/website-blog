@@ -25,7 +25,7 @@
         <br>
         <br>
 
-		<form name="form_login" method="post" action="checklogin.php">
+		<?php echo"<form name='form_login' method='post' action='checklogin.php?destination='".$_GET['destination']; ?>
 			<b>username</b>
 			<input name="username" type="text" id="username">
 			<br>
@@ -34,11 +34,12 @@
 			<br>
 			<input type="submit" name="submit" value="Login">
 			<br>
+			<a href="home.php"><b>Back to homepage</b></a>
+			<br>
 			<?php
-				if (isset($_SESSION['error']))
+				if(isset($_GET['error']))
 				{
-					echo $_SESSION['error'];
-					$_SESSION['error']="";
+					echo $_GET['error'];
 				}
 			?>
 		</form>
