@@ -25,7 +25,16 @@
         <br>
         <br>
 
-		<?php echo"<form name='form_login' method='post' action='checklogin.php?destination=".$_GET['destination']."'"; ?>
+		<?php
+			if(!isset($_GET['destination']) || $_GET['destination']=="")
+			{
+				$destination="home.php";
+			}
+			else
+			{
+				$destination=$_GET['destination'];
+			}
+			echo"<form name='form_login' method='post' action='checklogin.php?destination=".$destination."'"; ?>
 			<b>username</b>
 			<input name="username" type="text" id="username">
 			<br>
