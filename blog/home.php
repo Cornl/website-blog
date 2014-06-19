@@ -19,7 +19,21 @@
 				echo "<br> <br>";
 			}
 		?>
+
+		<nav id="nav">
+            <ul id="nav_ul">
+                <li class="nav_li">
+                    <a href="../website" class="nav_a">Website</a>
+                </li>
+                <li class="nav_li">
+                    <a href="#" class="nav_a">Blog</a>
+                    <span id="nav_span"></span>
+                </li>
+            </ul>
+        </nav>
+
 		<a href="logout.php">Logout</a>
 		<a href="adminpanel.php">Admin panel</a>
+		<div id="wrap"></div>
 	</body>
 </html>
