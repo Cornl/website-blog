@@ -23,13 +23,13 @@
 				$_SESSION['logged']=1;
 				$_SESSION['admin']=$row['admin'];
 				$_SESSION['error']="";
-				if(!isset($_SESSION['destination']) || $_SESSION['destination']=="")
+				if(!isset($_GET['destination']) || $_GET['destination']=="")
 				{
 					header("Location: home.php");
 				}
 				else
 				{
-					header("Location: ".$_SESSION['destination']);
+					header("Location: ".$_GET['destination']);
 				}
 			}
 			else

@@ -25,7 +25,7 @@
         <br>
         <br>
 
-		<?php echo"<form name='form_login' method='post' action='checklogin.php?destination='".$_GET['destination']; ?>
+		<?php echo"<form name='form_login' method='post' action='checklogin.php?destination=".$_GET['destination']."'"; ?>
 			<b>username</b>
 			<input name="username" type="text" id="username">
 			<br>
