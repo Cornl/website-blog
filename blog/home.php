@@ -28,8 +28,21 @@
 				$result=mysqli_query($con,"SELECT * FROM `posts`");
 				while($row=mysqli_fetch_array($result))
 				{
-					echo $row['title']." ".$row['body'];
-					echo "<br> <br>";
+					echo "
+						<div class='post'>
+							<span class='post_title'>
+					";
+					echo $row['title'];
+					echo "
+							</span>
+							<br>
+							<span class='post_body'>
+					";
+					echo $row['body'];
+					echo "
+							</span>
+						</div>
+					";
 				}
 			?>
 			<a href="logout.php">Logout</a>

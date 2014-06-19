@@ -13,8 +13,8 @@
 			checklogin();
 			checkadmin();
 
-			$title=$_POST['title'];
-			$body=$_POST['body'];
+			$title=mysqli_real_escape_string($con,$_POST['title']);
+			$body=mysqli_real_escape_string($con,$_POST['body']);
 
 			mysqli_query($con,"INSERT INTO `posts` (title,body) VALUES ('$title','$body')");
 

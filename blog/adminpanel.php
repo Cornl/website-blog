@@ -10,9 +10,10 @@
 		<?php
 			require("config.php");
 			require("functions.php");
-
+			
 			checklogin();
 			checkadmin();
+			$_SESSION['destination']="adminpanel.php";
 		?>
 
 		<nav id="nav">
@@ -26,7 +27,7 @@
                 </li>
             </ul>
         </nav>
-
+        <br><br><br><br><br><br>
 		<form name="form_post" method="post" action="post.php">
 			<b>title</b>
 			<input name="title" type="text" id="title">
