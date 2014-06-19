@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<?php session_start(); ?>
+<?php
+	session_start();
+	require("config.php");
+	require("functions.php");
+?>
 <html>
 	<head>
 		<title>home.php</title>
@@ -7,19 +11,6 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-		<?php
-			require("config.php");
-			require("functions.php");
-			checklogin();
-
-			$result=mysqli_query($con,"SELECT * FROM `posts`");
-			while($row=mysqli_fetch_array($result))
-			{
-				echo $row['title']." ".$row['body'];
-				echo "<br> <br>";
-			}
-		?>
-
 		<nav id="nav">
             <ul id="nav_ul">
                 <li class="nav_li">
@@ -32,8 +23,21 @@
             </ul>
         </nav>
 
-		<a href="logout.php">Logout</a>
-		<a href="adminpanel.php">Admin panel</a>
+        <div id="content">
+        	<?php
+				$result=mysqli_query($con,"SELECT * FROM `posts`");
+				while($row=mysqli_fetch_array($result))
+				{
+					echo $row['title']." ".$row['body'];
+					echo "<br> <br>";
+				}
+			?>
+			<a href="logout.php">Logout</a>
+			<a href="adminpanel.php">Admin panel</a>
+
+			<span id="footer">© 2013-2014 Made by Gergály Benedek</span>
+		</div>
+
 		<div id="wrap"></div>
 	</body>
 </html>
